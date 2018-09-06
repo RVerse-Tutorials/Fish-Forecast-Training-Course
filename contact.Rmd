@@ -3,9 +3,13 @@ title: "Contact"
 ---
 
 Eli Holmes
-National Marine Fisheries Service
-Northwest Fisheries Science Center
+
+[National Marine Fisheries Service](https://www.fisheries.noaa.gov/)
+
+[Northwest Fisheries Science Center](https://www.nwfsc.noaa.gov/)
+
 2725 Montlake Blvd East
+
 Seattle, WA
 
 eli.holmes@noaa.gov

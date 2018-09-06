@@ -9,6 +9,8 @@ ESSO-Indian National Centre for Ocean Information Services(INCOIS), Hyderabad, I
 
 Instructor: Dr. [Eli Holmes](https://eeholmes.github.io/), NOAA Fisheries Service, [Northwest Fisheries Science Center](https://www.nwfsc.noaa.gov/), Seattle, WA, USA.
 
+<hr>
+
 # Course Description
 
 This short course will be divided into a morning session on creating forecasting models for catch data and an afternoon session on Report-writing and Code documentation with R.
