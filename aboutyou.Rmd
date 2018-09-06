@@ -1,0 +1,9 @@
+---
+title: "About You"
+output:
+  html_document:
+    include:
+      after_body: footer.html
+---
+
+Using the Disqus comments below, please briefly introduce yourself and what kinds of scientific problems you work on.

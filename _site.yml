@@ -1,0 +1,30 @@
+name: fish-forecast-training-course
+output_dir: '.'
+navbar:
+  title: Fish-Forecast
+  left:
+  - text: Welcome
+    href: index.html
+  - text: Set-up
+    icon: fa-clone
+    href: set-up.html
+  - text: Data
+    icon: fa-clipboard-list
+    href: data.html
+  - text: About YOU
+    icon: fa-comment
+    href: aboutyou.html
+  right:
+  - text: Contact
+    href: contact.html
+output:
+  html_document:
+    theme: readable
+    toc_depth: 2
+    toc_float:
+      collapsed: no
+    highlight: textmate
+    css: styles.css
+    lib_dir: site_libs
+    self_contained: no
+

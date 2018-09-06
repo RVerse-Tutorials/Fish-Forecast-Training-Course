@@ -1,0 +1,88 @@
+---
+title: "Set-up"
+output:
+  html_document:
+    toc: true
+    include:
+      after_body: footer.html
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+## Get an account on GitHub
+
+If you don't already have an account on GitHub, go to [github.com](github.com) and click the "sign up" link near upper right 
+of the page.  It is pretty self-explanatory.  Go ahead and get a **free** account.  
+
+The free GitHub account does not have private repositories.  Everything is public and viewable.  You can upgrade (for money) and get private repositories.  Or _if you are a student_, you can get private repositories from GitHub for free.  Go to [https://education.github.com/pack](https://education.github.com/pack) to sign up for your free student pack.  You will need to upload proof that you are a student or faculty.
+
+## Install GitHub Desktop
+
+1. Go to [desktop.github.com](https://desktop.github.com/) and install.
+2. Open GitHub Desktop, go to 'GitHub Desktop > Preferences' menu.  
+3. Under 'Accounts', sign into your GitHub account.
+3. Under 'Git', enter your name (or initials) and the email you used for your GitHub account.
+
+## Install R and RStudio
+
+* **R:**  Make sure you have the latest version of R.  
+Go to [https://cran.r-project.org/](https://cran.r-project.org/) and find the download link for your computer system.
+
+* **RStudio:** Install the latest version of RStudio.  Get it from [https://www.rstudio.com/products/rstudio/download](https://www.rstudio.com/products/rstudio/download) and install the appropriate one for your OS.
+
+## Set up RStudio to use Git
+
+1. Open RStudio
+2. Go to Global Options (from the Tools menu)
+3. Click Git/SVN
+4. Click Enable version control interface for RStudio projects
+
+## Install R packages
+
+From the command line in R Studio
+
+1. **bookdown:** package.  Enter the following code at the command line (`>`).
+
+```{r get-bd, eval=FALSE}
+install.packages("devtools")  
+devtools::install_github("rstudio/bookdown")
+```
+
+2. Install **other packages** that we are going to be need. I have created a package on GitHub that will install the packages you need.
+
+```{r get-packages, eval=FALSE}
+devtools::install_github("RVerse-Tutorials/RWorkflowsetup")
+```
+
+## Create a workshop folder
+
+Create a folder/directory on your computer for the workshop materials.  You can create it anywhere you wish.  Name it `RWorkflow` just so we all use the same folder name for the workshop.
+
+## Disqus forum
+
+I have added a Disqus forum to the website.  [Create an account](https://disqus.com/) if you would like to be able to add comments/questions.  This will allow people to pose questions to the group and allow me (and others) to answer.
+
+## Downloading repositories
+
+You will need to fork (copy0 repositories from [RVerse-Tutorials](https://github.com/RVerse-Tutorials) for many of the labs. Please try to do this with a test repository that I have set up for you. 
+
+1. Log into GitHub.
+2. Go to [RVerse-Tutorials/Test](https://github.com/RVerse-Tutorials/Test).
+3. Click 'Fork' in the upper right corner of the repository.  This will create a copy of Test in your GitHub account.
+4. Open RStudio.  Click File > New Project > Version Control
+5. Paste in the url of the repository you are copying---the **forked** repository in your GitHub account.  For example, `https://github.com/<youraccount>/Test`  You can leave project name blank.  Replace `<youraccount>` with your GitHub account.
+6. You should now be able to see the files from Test in RStudio.  There is only one file, `README.md`.
+
+[Watch a video that shows you how to do this](https://youtu.be/b6AaTHFIY7U)
+
+## Packages with C++ code (Optional)
+
+We will not be doing this in this short course, but often you will want to install packages with C++ code.  To do that, you will need Rtools (Windows) or Xcode (Mac)
+
+* **Rtools** Windows users  [Rtools](https://cran.r-project.org/bin/windows/Rtools/) also so you can build packages with C++ code if needed.  See comments here about changing path. [Rtools](http://stat545.com/packages01_system-prep.html#windows-system-prep)
+
+* **Xcode** Mac users Open terminal and type the following command `xcode-select --install`
+
+
