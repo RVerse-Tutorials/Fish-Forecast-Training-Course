@@ -54,7 +54,7 @@ install.packages("devtools")
 devtools::install_github("rstudio/bookdown")
 ```
 
-2. Install **other packages** that we are going to be need. I have created a package on GitHub that will install the packages you need.
+2. Install **other packages** that we are going to be need. I have created a package on GitHub that will install the packages you need.  This will probably take **awhile** as the first time you do it, many packages will be loaded.
 
 ```{r get-packages, eval=FALSE}
 devtools::install_github("RVerse-Tutorials/RWorkflowsetup")
