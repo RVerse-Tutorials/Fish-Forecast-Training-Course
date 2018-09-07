@@ -11,6 +11,10 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
+The following with walk you through installing R, RStudio, and GitHub Desktop.  Though the instructions are long, it hopefully will not take you long to get set up.  You will need admin access on your laptop.
+
+If you run into trouble, you can post in the comment section at the bottom.   Please, help each other out in the comments if you can solve someone's installation issues.  I will check in periodically and try to help too.
+
 ## Get an account on GitHub
 
 If you don't already have an account on GitHub, go to [github.com](github.com) and click the "sign up" link near upper right 
