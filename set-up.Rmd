@@ -11,7 +11,7 @@ output:
 knitr::opts_chunk$set(echo = TRUE)
 ```
 
-The following with walk you through installing R, RStudio, and GitHub Desktop.  Though the instructions are long, it hopefully will not take you long to get set up.  You will need admin access on your laptop.
+The following will walk you through installing R, RStudio, and GitHub Desktop.  Though the instructions are long, it hopefully will not take you long to get set up.  You will need admin access on your laptop.
 
 If you run into trouble, you can post in the comment section at the bottom.   Please, help each other out in the comments if you can solve someone's installation issues.  I will check in periodically and try to help too.
 
@@ -22,12 +22,14 @@ of the page.  It is pretty self-explanatory.  Go ahead and get a **free** accoun
 
 The free GitHub account does not have private repositories.  Everything is public and viewable.  You can upgrade (for money) and get private repositories.  Or _if you are a student_, you can get private repositories from GitHub for free.  Go to [https://education.github.com/pack](https://education.github.com/pack) to sign up for your free student pack.  You will need to upload proof that you are a student or faculty.
 
-## Install GitHub Desktop
+## Install GitHub Desktop (Windows and Mac users)
 
 1. Go to [desktop.github.com](https://desktop.github.com/) and install.
 2. Open GitHub Desktop, go to 'GitHub Desktop > Preferences' menu.  
 3. Under 'Accounts', sign into your GitHub account.
 3. Under 'Git', enter your name (or initials) and the email you used for your GitHub account.
+
+Linux users can install Git and interact with GitHub though RStudio.  GitHub Desktop is not essential for the course, however it is a standard R Workflow that I will be demonstrating.
 
 ## Install R and RStudio
 
@@ -42,6 +44,8 @@ Go to [https://cran.r-project.org/](https://cran.r-project.org/) and find the do
 2. Go to Global Options (from the Tools menu)
 3. Click Git/SVN
 4. Click Enable version control interface for RStudio projects
+
+Linux users will need to install Git for this to work.  Windows/Mac users: Git comes with GitHub Desktop.
 
 ## Install R packages
 
@@ -70,7 +74,9 @@ I have added a Disqus forum to the website.  [Create an account](https://disqus.
 
 ## Downloading repositories
 
-You will need to fork (copy0 repositories from [RVerse-Tutorials](https://github.com/RVerse-Tutorials) for many of the labs. Please try to do this with a test repository that I have set up for you. 
+**In case we do not have internet access, I will provide the files on a thumb drive also.**
+
+You will need to fork (copy repositories from [RVerse-Tutorials](https://github.com/RVerse-Tutorials) for many of the labs. Please try to do this with a test repository that I have set up for you. 
 
 1. Log into GitHub.
 2. Go to [RVerse-Tutorials/Test](https://github.com/RVerse-Tutorials/Test).
