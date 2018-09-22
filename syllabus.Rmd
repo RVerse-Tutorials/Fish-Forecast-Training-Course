@@ -84,8 +84,3 @@ Lectures  | Labs
 3 Seasonal exponential smoothing models | 
 </div>
 
-<hr>
-
-<div style="text-align: center">
-<i class="fas fa-cubes"></i> Simple building blocks. Endless creations. <i class="fas fa-cubes"></i>
-</div>

@@ -30,5 +30,5 @@ In the afternoon, you will learn to write reports and websites with R and R Mark
 
 
 <div style="text-align: center">
-<i class="fas fa-cubes"></i> Simple building blocks. Endless creations. <i class="fas fa-cubes"></i>
+<i class="fas fa-cubes"></i> NOAA Fisheries - NW Fisheries Science Center <i class="fas fa-cubes"></i>
 </div>
