@@ -1,33 +1,18 @@
 ---
-title: "Fish Forecast Training Course"
+title: "Syllabus"
 output:
-  word_document: default
+  html_document:
+    toc: true
+    toc_depth: 1
+    toc_float:
+      collapsed: no
 ---
 
-Welcome to the training programme on "Fish-catch Time-Series Forecasting with R" organized by
-International Training Centre for Operational Oceanography (ITCOocean)
-ESSO-Indian National Centre for Ocean Information Services(INCOIS), Hyderabad, India. 
-[Course Announcement](http://www.incois.gov.in/ITCOocean/ftsf.jsp)
-
-Instructor: Dr. [Eli Holmes](https://eeholmes.github.io/), NOAA Fisheries Service, [Northwest Fisheries Science Center](https://www.nwfsc.noaa.gov/), Seattle, WA, USA.
-
-<hr>
-
-# Course Description
-
-This short course will be divided into a morning session on creating forecasting models for catch data and an afternoon session on Report-writing and Code documentation with R.
-
-The course will consist of short lectures and many practical labs where you will work with R to model data and prepare forecasts.  You are encouraged to bring your own time-series data, for example yearly or monthly catch or count data, so that you can begin to model it during the course.
-
-In the afternoon, you will learn to write reports and websites with R and R Markdown so that you can easily share your work and document your work.  You will learn how to easily prepare online books, reports and websites that integrate R and text.
-
-<hr>
-
-# Course Syllabus
-
-## Forecasting fisheries catch time series with R (Forenoon)
+# Forecasting fisheries catch time series with R (Forenoon)
 
 <img style="float: right" src="images/fish-forecast.jpg" width=20%>
+
+## Topics
 
 - Time-varying regression
 - Box-Jenkins (ARMA) Models
@@ -35,9 +20,12 @@ In the afternoon, you will learn to write reports and websites with R and R Mark
 - Modelling time series with seasonality
 - Forecast diagnostics and accuracy metrics
 
-## Report-writing and code documentation with R (Afternoon)
+
+# Report-writing and code documentation with R (Afternoon)
 
 <img style="float: right" src="images/tools-logo-transparent.png" width=20%>
+
+## Topics
 
 - Basic workflow using RStudio, Git and GitHub
 - Intro to R Markdown
@@ -47,8 +35,56 @@ In the afternoon, you will learn to write reports and websites with R and R Mark
 - Creating a book with R Markdown: Intro to Bookdown.
 - Creating and publishing RShiny applications
 
-<hr>
+# Catch Forecasting Lectures and Labs
 
+<style>
+.foo table {
+  width: 100%
+}
+.foo td {
+  width: 50%
+}
+</style>
+
+**Introduction**
+
+**Time-Varying Regression**
+
+<div class="foo">
+
+Lectures  | Labs
+------------- | -------------
+1 Introduction to time-varying regression  | 1 Fit TV regression models to catch data
+2 Forecasts with a time-varying regression model  | 2 Create time-varying regression forecasts
+
+**ARMA Models**
+
+Lectures  | Labs
+------------- | -------------
+1 Introduction to ARMA Models  | 1 Intro to ARMA models and diagnostic plots
+2 Stationarity  | 2 Test the Greek catch data for stationarity
+3 Selecting Model Structure | 3 Fit ARMA Models to the Greek catch data
+4 Fitting ARMA Models | 4 Create and test forecasts
+5 Create and test forecasts | 
+
+**Exponential Smoothing Models**
+
+Lectures  | Labs
+------------- | -------------
+1 Introduction to Exponential Smoothing Models  | 1 Fit exponential smoothing models to data
+2 Selecting Model Structure  | 2 Create forecasts with exponential smoothing models
+3 Forecasting with exponential smoothing models | 3 Testing models
+
+**Seasonality**
+
+Lectures  | Labs
+------------- | -------------
+1 Introduction to seasonality and approaches  | 1 Creating time-series objects with seasonality in R
+2 Seasonal time-vaying regression models  | 2 Seasonal exponential smoothing models
+3 Seasonal exponential smoothing models | 
+</div>
+
+<hr>
 
 <div style="text-align: center">
 <i class="fas fa-cubes"></i> Simple building blocks. Endless creations. <i class="fas fa-cubes"></i>

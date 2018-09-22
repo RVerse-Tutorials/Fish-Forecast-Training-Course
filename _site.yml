@@ -5,6 +5,8 @@ navbar:
   left:
   - text: Welcome
     href: index.html
+  - text: Syllabus
+    href: syllabus.html
   - text: Set-up
     icon: fa-clone
     href: set-up.html
@@ -14,9 +16,11 @@ navbar:
   - text: About YOU
     icon: fa-comment
     href: aboutyou.html
-  right:
   - text: Contact
     href: contact.html
+  right:
+  - icon: fa-github
+    href: https://github.com/RVerse-Tutorials/Fish-Forecast-Training-Course
 output:
   html_document:
     theme: readable

@@ -11,7 +11,7 @@
 
 
 
-<title>Fish Forecast Training Course</title>
+<title>Syllabus</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -19,6 +19,9 @@
 <script src="site_libs/bootstrap-3.3.5/js/bootstrap.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/html5shiv.min.js"></script>
 <script src="site_libs/bootstrap-3.3.5/shim/respond.min.js"></script>
+<script src="site_libs/jqueryui-1.11.4/jquery-ui.min.js"></script>
+<link href="site_libs/tocify-1.9.1/jquery.tocify.css" rel="stylesheet" />
+<script src="site_libs/tocify-1.9.1/jquery.tocify.js"></script>
 <script src="site_libs/navigation-1.1/tabsets.js"></script>
 <link href="site_libs/highlightjs-9.12.0/textmate.css" rel="stylesheet" />
 <script src="site_libs/highlightjs-9.12.0/highlight.js"></script>
@@ -264,6 +267,107 @@ $(document).ready(function () {
 
 
 
+<script>
+$(document).ready(function ()  {
+
+    // move toc-ignore selectors from section div to header
+    $('div.section.toc-ignore')
+        .removeClass('toc-ignore')
+        .children('h1,h2,h3,h4,h5').addClass('toc-ignore');
+
+    // establish options
+    var options = {
+      selectors: "h1",
+      theme: "bootstrap3",
+      context: '.toc-content',
+      hashGenerator: function (text) {
+        return text.replace(/[.\\/?&!#<>]/g, '').replace(/\s/g, '_').toLowerCase();
+      },
+      ignoreSelector: ".toc-ignore",
+      scrollTo: 0
+    };
+    options.showAndHide = false;
+    options.smoothScroll = true;
+
+    // tocify
+    var toc = $("#TOC").tocify(options).data("toc-tocify");
+});
+</script>
+
+<style type="text/css">
+
+#TOC {
+  margin: 25px 0px 20px 0px;
+}
+@media (max-width: 768px) {
+#TOC {
+  position: relative;
+  width: 100%;
+}
+}
+
+
+.toc-content {
+  padding-left: 30px;
+  padding-right: 40px;
+}
+
+div.main-container {
+  max-width: 1200px;
+}
+
+div.tocify {
+  width: 20%;
+  max-width: 260px;
+  max-height: 85%;
+}
+
+@media (min-width: 768px) and (max-width: 991px) {
+  div.tocify {
+    width: 25%;
+  }
+}
+
+@media (max-width: 767px) {
+  div.tocify {
+    width: 100%;
+    max-width: none;
+  }
+}
+
+.tocify ul, .tocify li {
+  line-height: 20px;
+}
+
+.tocify-subheader .tocify-item {
+  font-size: 0.90em;
+  padding-left: 25px;
+  text-indent: 0;
+}
+
+.tocify .list-group-item {
+  border-radius: 0px;
+}
+
+.tocify-subheader {
+  display: inline;
+}
+.tocify-subheader .tocify-item {
+  font-size: 0.95em;
+}
+
+</style>
+
+<!-- setup 3col/9col grid for toc_float and main content  -->
+<div class="row-fluid">
+<div class="col-xs-12 col-sm-4 col-md-3">
+<div id="TOC" class="tocify">
+</div>
+</div>
+
+<div class="toc-content col-xs-12 col-sm-8 col-md-9">
+
+
 
 
 <div class="navbar navbar-default  navbar-fixed-top" role="navigation">
@@ -280,6 +384,9 @@ $(document).ready(function () {
       <ul class="nav navbar-nav">
         <li>
   <a href="index.html">Welcome</a>
+</li>
+<li>
+  <a href="syllabus.html">Syllabus</a>
 </li>
 <li>
   <a href="set-up.html">
@@ -302,10 +409,16 @@ $(document).ready(function () {
     About YOU
   </a>
 </li>
+<li>
+  <a href="contact.html">Contact</a>
+</li>
       </ul>
       <ul class="nav navbar-nav navbar-right">
         <li>
-  <a href="contact.html">Contact</a>
+  <a href="https://github.com/RVerse-Tutorials/Fish-Forecast-Training-Course">
+    <span class="fa fa-github"></span>
+     
+  </a>
 </li>
       </ul>
     </div><!--/.nav-collapse -->
@@ -316,26 +429,16 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Fish Forecast Training Course</h1>
+<h1 class="title toc-ignore">Syllabus</h1>
 
 </div>
 
 
-<p>Welcome to the training programme on “Fish-catch Time-Series Forecasting with R” organized by International Training Centre for Operational Oceanography (ITCOocean) ESSO-Indian National Centre for Ocean Information Services(INCOIS), Hyderabad, India. <a href="http://www.incois.gov.in/ITCOocean/ftsf.jsp">Course Announcement</a></p>
-<p>Instructor: Dr. <a href="https://eeholmes.github.io/">Eli Holmes</a>, NOAA Fisheries Service, <a href="https://www.nwfsc.noaa.gov/">Northwest Fisheries Science Center</a>, Seattle, WA, USA.</p>
-<hr>
-<div id="course-description" class="section level1">
-<h1>Course Description</h1>
-<p>This short course will be divided into a morning session on creating forecasting models for catch data and an afternoon session on Report-writing and Code documentation with R.</p>
-<p>The course will consist of short lectures and many practical labs where you will work with R to model data and prepare forecasts. You are encouraged to bring your own time-series data, for example yearly or monthly catch or count data, so that you can begin to model it during the course.</p>
-<p>In the afternoon, you will learn to write reports and websites with R and R Markdown so that you can easily share your work and document your work. You will learn how to easily prepare online books, reports and websites that integrate R and text.</p>
-<hr>
-</div>
-<div id="course-syllabus" class="section level1">
-<h1>Course Syllabus</h1>
-<div id="forecasting-fisheries-catch-time-series-with-r-forenoon" class="section level2">
-<h2>Forecasting fisheries catch time series with R (Forenoon)</h2>
+<div id="forecasting-fisheries-catch-time-series-with-r-forenoon" class="section level1">
+<h1>Forecasting fisheries catch time series with R (Forenoon)</h1>
 <p><img style="float: right" src="images/fish-forecast.jpg" width=20%></p>
+<div id="topics" class="section level2">
+<h2>Topics</h2>
 <ul>
 <li>Time-varying regression</li>
 <li>Box-Jenkins (ARMA) Models</li>
@@ -344,9 +447,12 @@ $(document).ready(function () {
 <li>Forecast diagnostics and accuracy metrics</li>
 </ul>
 </div>
-<div id="report-writing-and-code-documentation-with-r-afternoon" class="section level2">
-<h2>Report-writing and code documentation with R (Afternoon)</h2>
+</div>
+<div id="report-writing-and-code-documentation-with-r-afternoon" class="section level1">
+<h1>Report-writing and code documentation with R (Afternoon)</h1>
 <p><img style="float: right" src="images/tools-logo-transparent.png" width=20%></p>
+<div id="topics-1" class="section level2">
+<h2>Topics</h2>
 <ul>
 <li>Basic workflow using RStudio, Git and GitHub</li>
 <li>Intro to R Markdown</li>
@@ -356,15 +462,139 @@ $(document).ready(function () {
 <li>Creating a book with R Markdown: Intro to Bookdown.</li>
 <li>Creating and publishing RShiny applications</li>
 </ul>
+</div>
+</div>
+<div id="catch-forecasting-lectures-and-labs" class="section level1">
+<h1>Catch Forecasting Lectures and Labs</h1>
+<style>
+.foo table {
+  width: 100%
+}
+.foo td {
+  width: 50%
+}
+</style>
+<p><strong>Introduction</strong></p>
+<p><strong>Time-Varying Regression</strong></p>
+<div class="foo">
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lectures</th>
+<th>Labs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 Introduction to time-varying regression</td>
+<td>1 Fit TV regression models to catch data</td>
+</tr>
+<tr class="even">
+<td>2 Forecasts with a time-varying regression model</td>
+<td>2 Create time-varying regression forecasts</td>
+</tr>
+</tbody>
+</table>
+<p><strong>ARMA Models</strong></p>
+<table>
+<thead>
+<tr class="header">
+<th>Lectures</th>
+<th>Labs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 Introduction to ARMA Models</td>
+<td>1 Intro to ARMA models and diagnostic plots</td>
+</tr>
+<tr class="even">
+<td>2 Stationarity</td>
+<td>2 Test the Greek catch data for stationarity</td>
+</tr>
+<tr class="odd">
+<td>3 Selecting Model Structure</td>
+<td>3 Fit ARMA Models to the Greek catch data</td>
+</tr>
+<tr class="even">
+<td>4 Fitting ARMA Models</td>
+<td>4 Create and test forecasts</td>
+</tr>
+<tr class="odd">
+<td>5 Create and test forecasts</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p><strong>Exponential Smoothing Models</strong></p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lectures</th>
+<th>Labs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 Introduction to Exponential Smoothing Models</td>
+<td>1 Fit exponential smoothing models to data</td>
+</tr>
+<tr class="even">
+<td>2 Selecting Model Structure</td>
+<td>2 Create forecasts with exponential smoothing models</td>
+</tr>
+<tr class="odd">
+<td>3 Forecasting with exponential smoothing models</td>
+<td>3 Testing models</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Seasonality</strong></p>
+<table>
+<colgroup>
+<col width="50%" />
+<col width="50%" />
+</colgroup>
+<thead>
+<tr class="header">
+<th>Lectures</th>
+<th>Labs</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>1 Introduction to seasonality and approaches</td>
+<td>1 Creating time-series objects with seasonality in R</td>
+</tr>
+<tr class="even">
+<td>2 Seasonal time-vaying regression models</td>
+<td>2 Seasonal exponential smoothing models</td>
+</tr>
+<tr class="odd">
+<td>3 Seasonal exponential smoothing models</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+</div>
 <hr>
 <div style="text-align: center">
 <p><i class="fas fa-cubes"></i> Simple building blocks. Endless creations. <i class="fas fa-cubes"></i></p>
 </div>
 </div>
+
+
+
 </div>
-
-
-
+</div>
 
 </div>
 
