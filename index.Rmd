@@ -21,10 +21,8 @@ The course will consist of short lectures and many practical labs where you will
 
 In the afternoon, you will learn to write reports and websites with R and R Markdown so that you can easily share your work and document your work.  You will learn how to easily prepare online books, reports and websites that integrate R and text.
 
-# Course Links
-
-- Catch Forecasting [Web Link](https://fish-forecast.github.io/Catch-Forecasting-INCOIS/)
-- R Workflow [Web Link](https://rverse-tutorials.github.io/RWorkflow-Workshop/)
+- Catch Forecasting [Web Link](https://fish-forecast.github.io/Catch-Forecasting-INCOIS/) -- [File Link](../Catch-Forecasting-INCOIS/index.html)
+- R Workflow [Web Link](https://rverse-tutorials.github.io/RWorkflow-Workshop/) -- [File Link](../RWorkflow-Workshop/index.html)
 
 <hr>
 
