@@ -13,7 +13,7 @@ navbar:
   - text: Data
     icon: fa-clipboard-list
     href: data.html
-  - text: About YOU
+  - text: Comments and Questions
     icon: fa-comment
     href: aboutyou.html
   - text: Contact
