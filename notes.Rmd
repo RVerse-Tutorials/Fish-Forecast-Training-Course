@@ -1,0 +1,43 @@
+---
+title: "Notes"
+output:
+  html_document:
+    include:
+      before_body: header.html
+---
+
+# Monday
+
+----
+
+Please install the rmarkdown package.  I forgot to include that.
+
+```
+install.packages("rmarkdown")
+```
+
+----
+
+If you do not have LaTeX installed, you can install the tinytex package.  Run these commands.  This will allow you to make PDF files from R Markdown files.  Some of you installed tinytex, but you need to run the 2nd command also to install LiveTeX.
+
+```
+install.packages('tinytex')
+tinytex::install_tinytex()
+```
+
+----
+
+If your get an error saying package or repository unavailable when you are trying to install packages, try the following:
+
+* Make sure you are online.
+* Run `chooseCRANmirror()` from the command line.  Pick any mirror.
+* Try installing package again.  Repeat with a different mirror if it doesn't work.
+
+-----
+
+<hr>
+
+
+<div style="text-align: center">
+<i class="fas fa-cubes"></i> NOAA Fisheries - NW Fisheries Science Center <i class="fas fa-cubes"></i>
+</div>

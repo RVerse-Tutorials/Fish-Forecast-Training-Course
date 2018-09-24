@@ -312,8 +312,11 @@ div.tocify {
   <a href="aboutyou.html">
     <span class="fa fa-comment"></span>
      
-    Comments and Questions
+    Comments &amp; Questions
   </a>
+</li>
+<li>
+  <a href="notes.html">Daily Notes</a>
 </li>
 <li>
   <a href="contact.html">Contact</a>
@@ -330,6 +333,10 @@ div.tocify {
     </div><!--/.nav-collapse -->
   </div><!--/.container -->
 </div><!--/.navbar -->
+<div style="right:7%; position:fixed">
+<a href="https://fish-forecast.github.io/Catch-Forecasting-INCOIS/"><img src="images/fish-forecast.jpg" width=25px></a>
+<a href="https://rverse-tutorials.github.io/RWorkflow-Workshop/"><img src="images/tools-logo-transparent.png" width=25px></a>
+</div>
 
 <div class="fluid-row" id="header">
 
@@ -349,6 +356,7 @@ div.tocify {
 </div>
 <div id="install-github-desktop-windows-and-mac-users" class="section level2">
 <h2>Install GitHub Desktop (Windows and Mac users)</h2>
+<p><em>Windows users: GitHub Desktop is only available for 64-bit</em></p>
 <ol style="list-style-type: decimal">
 <li>Go to <a href="https://desktop.github.com/">desktop.github.com</a> and install.</li>
 <li>Open GitHub Desktop, go to ‘GitHub Desktop &gt; Preferences’ menu.<br />
@@ -357,6 +365,7 @@ div.tocify {
 <li>Under ‘Git’, enter your name (or initials) and the email you used for your GitHub account.</li>
 </ol>
 <p>Linux users can install Git and interact with GitHub though RStudio. GitHub Desktop is not essential for the course, however it is a standard R Workflow that I will be demonstrating.</p>
+<p>You should not need to install Git as that comes with GitHub Desktop, however it is possible that you will need to to interact with RStudio. If so, download and install Git from <a href="https://git-scm.com/downloads">git-scm</a>.</p>
 </div>
 <div id="install-r-and-rstudio" class="section level2">
 <h2>Install R and RStudio</h2>
@@ -374,10 +383,12 @@ Go to <a href="https://cran.r-project.org/" class="uri">https://cran.r-project.o
 <li>Click Git/SVN</li>
 <li>Click Enable version control interface for RStudio projects</li>
 </ol>
-<p>Linux users will need to install Git for this to work. Windows/Mac users: Git comes with GitHub Desktop.</p>
+<p>Linux users will need to install Git for this to work.</p>
+<p>Windows/Mac users: Git comes with GitHub Desktop. If RStudio complains that it cannot find Git: 1. Make sure you set your Preferences in GitHub Desktop. 2. Download and install Git from from <a href="https://git-scm.com/downloads">git-scm</a>.</p>
 </div>
 <div id="install-r-packages" class="section level2">
 <h2>Install R packages</h2>
+<p><em>If you get an error saying that the repository cannot be found: 1. Check that you are online. 2. Run <code>chooseCRANmirror()</code> and choose a mirror. 3. Repeat until you find a mirror that has the up to date packages.</em></p>
 <p>From the command line in R Studio</p>
 <ol style="list-style-type: decimal">
 <li><strong>bookdown:</strong> package. Enter the following code at the command line (<code>&gt;</code>).</li>
@@ -388,6 +399,11 @@ devtools::install_github(&quot;rstudio/bookdown&quot;)</code></pre>
 <li>Install <strong>other packages</strong> that we are going to be need. I have created a package on GitHub that will install the packages you need. This will probably take <strong>awhile</strong> as the first time you do it, many packages will be loaded.</li>
 </ol>
 <pre class="r"><code>devtools::install_github(&quot;RVerse-Tutorials/RWorkflowsetup&quot;)</code></pre>
+<ol start="3" style="list-style-type: decimal">
+<li>If you do not have LaTeX installed, you can install the tinytex package. Run these commands. This will allow you to make PDF files from R Markdown files.</li>
+</ol>
+<pre><code>install.packages(&#39;tinytex&#39;)
+tinytex::install_tinytex()</code></pre>
 </div>
 <div id="create-a-workshop-folder" class="section level2">
 <h2>Create a workshop folder</h2>
@@ -400,16 +416,16 @@ devtools::install_github(&quot;rstudio/bookdown&quot;)</code></pre>
 <div id="downloading-repositories" class="section level2">
 <h2>Downloading repositories</h2>
 <p><strong>In case we do not have internet access, I will provide the files on a thumb drive also.</strong></p>
-<p>You will need to fork (copy repositories from <a href="https://github.com/RVerse-Tutorials">RVerse-Tutorials</a> for many of the labs. Please try to do this with a test repository that I have set up for you.</p>
+<p>You will need to fork (copy) repositories from <a href="https://github.com/RVerse-Tutorials">RVerse-Tutorials</a> for many of the labs. You can also download zip files.</p>
 <ol style="list-style-type: decimal">
 <li>Log into GitHub.</li>
 <li>Go to <a href="https://github.com/RVerse-Tutorials/Test">RVerse-Tutorials/Test</a>.</li>
-<li>Click ‘Fork’ in the upper right corner of the repository. This will create a copy of Test in your GitHub account.</li>
+<li>Click ‘Fork’ in the upper right corner of the repository. This will create a copy of Test-Website in your GitHub account.</li>
 <li>Open RStudio. Click File &gt; New Project &gt; Version Control</li>
 <li>Paste in the url of the repository you are copying—the <strong>forked</strong> repository in your GitHub account. For example, <code>https://github.com/&lt;youraccount&gt;/Test</code> You can leave project name blank. Replace <code>&lt;youraccount&gt;</code> with your GitHub account.</li>
 <li>You should now be able to see the files from Test in RStudio. There is only one file, <code>README.md</code>.</li>
 </ol>
-<p><a href="https://youtu.be/b6AaTHFIY7U">Watch a video that shows you how to do this</a></p>
+<p><a href="https://youtu.be/b6AaTHFIY7U">Watch a video that shows you how to fork a repository</a></p>
 </div>
 <div id="packages-with-c-code-optional" class="section level2">
 <h2>Packages with C++ code (Optional)</h2>

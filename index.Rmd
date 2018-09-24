@@ -1,5 +1,9 @@
 ---
 title: "Fish Forecast Training Course"
+output:
+  html_document:
+    include:
+      before_body: header.html
 ---
 
 Welcome to the training programme on "Fish-catch Time-Series Forecasting with R" organized by

@@ -1,5 +1,9 @@
 ---
 title: "Data"
+output:
+  html_document:
+    include:
+      before_body: header.html
 ---
 
 We will be modeling and forecasting catch data however you can use the techniques we will learn on any regularly spaced time data.

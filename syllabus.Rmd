@@ -6,6 +6,8 @@ output:
     toc_depth: 1
     toc_float:
       collapsed: no
+    include:
+      before_body: header.html
 ---
 
 # Forecasting fisheries catch time series with R (Forenoon)

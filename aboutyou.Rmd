@@ -4,6 +4,7 @@ output:
   html_document:
     include:
       after_body: footer.html
+      before_body: header.html
 ---
 
 Post questions and problems here.

@@ -11,7 +11,7 @@
 
 
 
-<title>Data</title>
+<title>Notes</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -238,51 +238,32 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Data</h1>
+<h1 class="title toc-ignore">Notes</h1>
 
 </div>
 
 
-<p>We will be modeling and forecasting catch data however you can use the techniques we will learn on any regularly spaced time data.</p>
-<p><img src="data_files/figure-html/load_data-1.png" width="768" style="display: block; margin: auto;" /></p>
-<div id="data-format" class="section level2">
-<h2>Data Format</h2>
-<p>Your data should be in a simple csv (comma-separated) file with time (year, day, month, etc) and value:</p>
-<pre><code>Year, metric.tons
-1964, 5449.2
-1965, 4263.5
-1966, 5146.4
-1967, 7271.5
-1968, 6352.5</code></pre>
-<p>If you have different locations or species, add that as a new column.</p>
-<pre><code>Year, metric.tons, species
-1964, 5449.2, Anchovy
-1965, 4263.5, Anchovy
-1966, 5146.4, Anchovy
-1967, 7271.5, Anchovy
-1968, 6352.5, Anchovy
-1964, 5449.2, Sardine
-1965, 4263.5, Sardine
-1966, 5146.4, Sardine
-1967, 7271.5, Sardine
-1968, 6352.5, Sardine</code></pre>
-<p>Here is an example with species and location.</p>
-<pre><code>Year, metric.tons, species, region
-1964, 5449.2, Anchovy, North
-1965, 4263.5, Anchovy, North
-1966, 5146.4, Anchovy, North
-1967, 7271.5, Anchovy, North
-1968, 6352.5, Anchovy, North
-1964, 5449.2, Sardine, North
-1965, 4263.5, Sardine, North
-1966, 5146.4, Sardine, North
-1967, 7271.5, Sardine, North
-1968, 6352.5, Sardine, North
-1964, 5449.2, Sardine, South
-1965, 4263.5, Sardine, South
-1966, 5146.4, Sardine, South
-1967, 7271.5, Sardine, South
-1968, 6352.5, Sardine, South</code></pre>
+<div id="monday" class="section level1">
+<h1>Monday</h1>
+<hr />
+<p>Please install the rmarkdown package. I forgot to include that.</p>
+<pre><code>install.packages(&quot;rmarkdown&quot;)</code></pre>
+<hr />
+<p>If you do not have LaTeX installed, you can install the tinytex package. Run these commands. This will allow you to make PDF files from R Markdown files. Some of you installed tinytex, but you need to run the 2nd command also to install LiveTeX.</p>
+<pre><code>install.packages(&#39;tinytex&#39;)
+tinytex::install_tinytex()</code></pre>
+<hr />
+<p>If your get an error saying package or repository unavailable when you are trying to install packages, try the following:</p>
+<ul>
+<li>Make sure you are online.</li>
+<li>Run <code>chooseCRANmirror()</code> from the command line. Pick any mirror.</li>
+<li>Try installing package again. Repeat with a different mirror if it doesn’t work.</li>
+</ul>
+<hr />
+<hr>
+<div style="text-align: center">
+<p><i class="fas fa-cubes"></i> NOAA Fisheries - NW Fisheries Science Center <i class="fas fa-cubes"></i></p>
+</div>
 </div>
 
 
