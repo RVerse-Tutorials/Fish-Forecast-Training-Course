@@ -8,6 +8,23 @@ output:
 
 # Tuesday
 
+Read in simple csv file named `test.csv` that looks like this
+
+```
+  Year Species metric.tons
+1 2018   Fish1           1
+2 2019   Fish1           2
+3 2018   Fish2           3
+4 2019   Fish2           4
+5 2018   Fish3           6
+6 2019   Fish4          NA
+```
+
+```
+test <- read.csv("Data/test.csv", stringsAsFactors = FALSE)
+save(test, file="test.RData")
+```
+
 What is a list?  It is a object with multiple other types of objects 'tied' together.
 
 ```{r}

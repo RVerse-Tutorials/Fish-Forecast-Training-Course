@@ -255,9 +255,39 @@ $(document).ready(function () {
 </div>
 
 
+<div id="tuesday" class="section level1">
+<h1>Tuesday</h1>
+<p>Read in simple csv file named <code>test.csv</code> that looks like this</p>
+<pre><code>  Year Species metric.tons
+1 2018   Fish1           1
+2 2019   Fish1           2
+3 2018   Fish2           3
+4 2019   Fish2           4
+5 2018   Fish3           6
+6 2019   Fish4          NA</code></pre>
+<pre><code>test &lt;- read.csv(&quot;Data/test.csv&quot;, stringsAsFactors = FALSE)
+save(test, file=&quot;test.RData&quot;)</code></pre>
+<p>What is a list? It is a object with multiple other types of objects ‘tied’ together.</p>
+<pre class="r"><code>a &lt;- list(ar=c(.8,.3), name=&quot;model&quot;, years=1:10)
+a</code></pre>
+<pre><code>## $ar
+## [1] 0.8 0.3
+## 
+## $name
+## [1] &quot;model&quot;
+## 
+## $years
+##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
+<p>You can now reference the different objects in <code>a</code>.</p>
+<pre class="r"><code>a$ar</code></pre>
+<pre><code>## [1] 0.8 0.3</code></pre>
+<pre class="r"><code>a$name</code></pre>
+<pre><code>## [1] &quot;model&quot;</code></pre>
+<hr />
+<p>Why is the <code>arima.sim</code> throwing an error sometimes?</p>
+</div>
 <div id="monday" class="section level1">
 <h1>Monday</h1>
-<hr />
 <p>Please install the rmarkdown package. I forgot to include that.</p>
 <pre><code>install.packages(&quot;rmarkdown&quot;)</code></pre>
 <hr />
