@@ -8,7 +8,11 @@ output:
 
 # Tuesday
 
-Read in simple csv file named `test.csv` that looks like this
+The bookdown-demo repository has been edited so that it does not try to make a PDF.  If you want that, there are instructions in the README.md file.
+
+---
+
+Read in simple csv file named ```test.csv``` that looks like this
 
 ```
   Year Species metric.tons
@@ -19,11 +23,39 @@ Read in simple csv file named `test.csv` that looks like this
 5 2018   Fish3           6
 6 2019   Fish4          NA
 ```
+with this code:
 
 ```
 test <- read.csv("Data/test.csv", stringsAsFactors = FALSE)
 save(test, file="test.RData")
 ```
+
+---
+
+Read in a file where the data are in columns.  If your data look like this with each species (or site) across the columns:
+
+```
+Year,Anchovy,Sardine,Chub mackerel,Horse mackerel,Mackerel,Jack Mackerel
+1964,5449.2,12984.4,1720.7,4022.4,NA,NA
+1965,4263.5,10611.1,1278.5,4158.3,NA,NA
+1966,5146.4,11437.8,802.6,3012.1,NA,NA
+```
+
+Use this code:
+
+```
+library(reshape2)
+melt(test, id="Year", value.name="metric.tons", variable.name="Species")
+```
+
+If your data also have, say, a month (or qtr) column, use this code:
+
+```
+library(reshape2)
+melt(test, id=c("Year","Month"), value.name="metric.tons", variable.name="Species")
+```
+
+---
 
 What is a list?  It is a object with multiple other types of objects 'tied' together.
 
@@ -41,7 +73,7 @@ a$name
 
 ----
 
-Why is the `arima.sim` throwing an error sometimes?
+Why is the `arima.sim` throwing an error sometimes?  You must specify a stationary model and if you just randomly chose the $\beta$'s (AR parameters) and $\theta$'s (MA parameters) then you might be specifying a non-stationary model.
 
 # Monday
 
