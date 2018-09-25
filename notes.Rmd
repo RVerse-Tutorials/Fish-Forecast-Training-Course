@@ -6,9 +6,27 @@ output:
       before_body: header.html
 ---
 
-# Monday
+# Tuesday
+
+What is a list?  It is a object with multiple other types of objects 'tied' together.
+
+```{r}
+a <- list(ar=c(.8,.3), name="model", years=1:10)
+a
+```
+
+You can now reference the different objects in `a`.
+
+```{r}
+a$ar
+a$name
+```
 
 ----
+
+Why is the `arima.sim` throwing an error sometimes?
+
+# Monday
 
 Please install the rmarkdown package.  I forgot to include that.
 
