@@ -271,17 +271,21 @@ $(document).ready(function () {
 <pre><code>test &lt;- read.csv(&quot;Data/test.csv&quot;, stringsAsFactors = FALSE)
 save(test, file=&quot;test.RData&quot;)</code></pre>
 <hr />
-<p>Read in a file where the data are in columns. If your data look like this with each species (or site) across the columns:</p>
+<p>Read in a file where the data are in columns. If your data (test.csv) look like this with each species (or site) across the columns:</p>
 <pre><code>Year,Anchovy,Sardine,Chub mackerel,Horse mackerel,Mackerel,Jack Mackerel
 1964,5449.2,12984.4,1720.7,4022.4,NA,NA
 1965,4263.5,10611.1,1278.5,4158.3,NA,NA
 1966,5146.4,11437.8,802.6,3012.1,NA,NA</code></pre>
 <p>Use this code:</p>
 <pre><code>library(reshape2)
-melt(test, id=&quot;Year&quot;, value.name=&quot;metric.tons&quot;, variable.name=&quot;Species&quot;)</code></pre>
+test &lt;- read.csv(&quot;Data/test.csv&quot;, stringsAsFactors = FALSE)
+melt(test, id=&quot;Year&quot;, value.name=&quot;metric.tons&quot;, variable.name=&quot;Species&quot;)
+save(test, file=&quot;test.RData&quot;)</code></pre>
 <p>If your data also have, say, a month (or qtr) column, use this code:</p>
 <pre><code>library(reshape2)
-melt(test, id=c(&quot;Year&quot;,&quot;Month&quot;), value.name=&quot;metric.tons&quot;, variable.name=&quot;Species&quot;)</code></pre>
+test &lt;- read.csv(&quot;Data/test.csv&quot;, stringsAsFactors = FALSE)
+melt(test, id=c(&quot;Year&quot;,&quot;Month&quot;), value.name=&quot;metric.tons&quot;, variable.name=&quot;Species&quot;)
+save(test, file=&quot;test.RData&quot;)</code></pre>
 <hr />
 <p>What is a list? It is a object with multiple other types of objects ‘tied’ together.</p>
 <pre class="r"><code>a &lt;- list(ar=c(.8,.3), name=&quot;model&quot;, years=1:10)

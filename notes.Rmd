@@ -32,7 +32,7 @@ save(test, file="test.RData")
 
 ---
 
-Read in a file where the data are in columns.  If your data look like this with each species (or site) across the columns:
+Read in a file where the data are in columns.  If your data (test.csv) look like this with each species (or site) across the columns:
 
 ```
 Year,Anchovy,Sardine,Chub mackerel,Horse mackerel,Mackerel,Jack Mackerel
@@ -45,14 +45,18 @@ Use this code:
 
 ```
 library(reshape2)
+test <- read.csv("Data/test.csv", stringsAsFactors = FALSE)
 melt(test, id="Year", value.name="metric.tons", variable.name="Species")
+save(test, file="test.RData")
 ```
 
 If your data also have, say, a month (or qtr) column, use this code:
 
 ```
 library(reshape2)
+test <- read.csv("Data/test.csv", stringsAsFactors = FALSE)
 melt(test, id=c("Year","Month"), value.name="metric.tons", variable.name="Species")
+save(test, file="test.RData")
 ```
 
 ---
