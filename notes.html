@@ -255,6 +255,15 @@ $(document).ready(function () {
 </div>
 
 
+<div id="wednesday" class="section level1">
+<h1>Wednesday</h1>
+<p>To save data in R to a .csv file use the following:</p>
+<pre><code>write.csv(landings, file=&quot;test.csv&quot;, row.names=FALSE, quote=FALSE)</code></pre>
+<p>This works for data.frames, like landings, and also matrices:</p>
+<pre><code>mat &lt;- matrix(rnorm(10),5,2)
+colnames(mat) &lt;- c(&quot;number 1&quot;, &quot;number 2&quot;)
+write.csv(landings, file=&quot;test.csv&quot;, row.names=FALSE, quote=FALSE)</code></pre>
+</div>
 <div id="tuesday" class="section level1">
 <h1>Tuesday</h1>
 <p>The bookdown-demo repository has been edited so that it does not try to make a PDF. If you want that, there are instructions in the README.md file.</p>
@@ -286,6 +295,17 @@ save(test, file=&quot;test.RData&quot;)</code></pre>
 test &lt;- read.csv(&quot;Data/test.csv&quot;, stringsAsFactors = FALSE)
 melt(test, id=c(&quot;Year&quot;,&quot;Month&quot;), value.name=&quot;metric.tons&quot;, variable.name=&quot;Species&quot;)
 save(test, file=&quot;test.RData&quot;)</code></pre>
+<hr />
+<p>If you have a response variable and multiple explanatory variables:</p>
+<pre><code>Year, Anchovy, SST,  Mackerel
+1964, 5449.2,  24.4, 1720.7
+1965, 4263.5,  30.1, 1278.5
+1966, 5146.4,  23.8,  802.6</code></pre>
+<p>Use this code:</p>
+<pre><code>test &lt;- read.csv(&quot;Data/test.csv&quot;, stringsAsFactors = FALSE)
+save(test, file=&quot;test.RData&quot;)</code></pre>
+<p>Use this <code>lm()</code> model (or gam() etc):</p>
+<pre><code>fit &lt;- lm(Anchovy ~ SST + Mackerel, data=test)</code></pre>
 <hr />
 <p>What is a list? It is a object with multiple other types of objects ‘tied’ together.</p>
 <pre class="r"><code>a &lt;- list(ar=c(.8,.3), name=&quot;model&quot;, years=1:10)

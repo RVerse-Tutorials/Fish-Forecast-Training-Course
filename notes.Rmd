@@ -6,6 +6,23 @@ output:
       before_body: header.html
 ---
 
+# Wednesday
+
+To save data in R to a .csv file use the following:
+
+```
+write.csv(landings, file="test.csv", row.names=FALSE, quote=FALSE)
+```
+
+This works for data.frames, like landings, and also matrices:
+
+```
+mat <- matrix(rnorm(10),5,2)
+colnames(mat) <- c("number 1", "number 2")
+write.csv(landings, file="test.csv", row.names=FALSE, quote=FALSE)
+```
+
+
 # Tuesday
 
 The bookdown-demo repository has been edited so that it does not try to make a PDF.  If you want that, there are instructions in the README.md file.
@@ -57,6 +74,30 @@ library(reshape2)
 test <- read.csv("Data/test.csv", stringsAsFactors = FALSE)
 melt(test, id=c("Year","Month"), value.name="metric.tons", variable.name="Species")
 save(test, file="test.RData")
+```
+
+----
+
+If you have a response variable and multiple explanatory variables:
+
+```
+Year, Anchovy, SST,  Mackerel
+1964, 5449.2,  24.4, 1720.7
+1965, 4263.5,  30.1, 1278.5
+1966, 5146.4,  23.8,  802.6
+```
+
+Use this code:
+
+```
+test <- read.csv("Data/test.csv", stringsAsFactors = FALSE)
+save(test, file="test.RData")
+```
+
+Use this `lm()` model (or gam() etc):
+
+```
+fit <- lm(Anchovy ~ SST + Mackerel, data=test)
 ```
 
 ---
