@@ -255,6 +255,21 @@ $(document).ready(function () {
 </div>
 
 
+<div id="thusday" class="section level1">
+<h1>Thusday</h1>
+<p>Seasonal data. If you have seasonal data that you would like to analyze, please put in this format:</p>
+<pre><code>  Year   Month  metric.tons
+ 2018   1           1
+ 2018   2           2
+ 2018   3           3
+ ...   
+ 2019   1           4
+ 2019   2           6
+ 2019   3          NA</code></pre>
+<p>Read in with this code:</p>
+<pre><code>test &lt;- read.csv(&quot;Data/test.csv&quot;, stringsAsFactors = FALSE)
+save(test, file=&quot;test.RData&quot;)</code></pre>
+</div>
 <div id="wednesday" class="section level1">
 <h1>Wednesday</h1>
 <p>To save data in R to a .csv file use the following:</p>

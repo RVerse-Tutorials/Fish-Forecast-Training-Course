@@ -6,6 +6,28 @@ output:
       before_body: header.html
 ---
 
+# Thusday 
+
+Seasonal data.  If you have seasonal data that you would like to analyze, please put in this format:
+
+```
+  Year   Month  metric.tons
+ 2018   1           1
+ 2018   2           2
+ 2018   3           3
+ ...   
+ 2019   1           4
+ 2019   2           6
+ 2019   3          NA
+```
+
+Read in with this code:
+
+```
+test <- read.csv("Data/test.csv", stringsAsFactors = FALSE)
+save(test, file="test.RData")
+```
+
 # Wednesday
 
 To save data in R to a .csv file use the following:
