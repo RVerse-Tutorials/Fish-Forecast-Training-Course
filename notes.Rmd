@@ -6,7 +6,13 @@ output:
       before_body: header.html
 ---
 
-# Thusday 
+# Thursday 
+
+For building a package with roxygen documentation (the part that makes the help files for you), you need to tell RStudio to build that documentation when you click 'Build and Reload'.
+
+Go to Tools > Project Options > Build Tools   Then click the box that says the build documentation with roxygen.  A pop-up window should appear.  Click the box at the bottom that says to remake documentation when you click 'Build and Reload'.
+
+----
 
 Seasonal data.  If you have seasonal data that you would like to analyze, please put in this format:
 
