@@ -1,0 +1,35 @@
+---
+title: "Continuing your learning"
+output:
+  html_document:
+    include:
+      before_body: header.html
+---
+
+Here are resources for continuing your learning of the topics that you studied this week:
+
+## Intro to R
+
+* [Software Carpentry free tutorial](http://swcarpentry.github.io/r-novice-inflammation)
+
+* [Data Camp free tutorial](https://www.datacamp.com/courses/free-introduction-to-r).  Takes about 4 hours.   
+
+* You can also learn R straight from within R using the [swirl package](https://swirlstats.com/).  This doesn't require internet access except to install the package.
+
+* Basic R introduction from [ComputerWorld](https://www.computerworld.com/article/2497143/business-intelligence/business-intelligence-beginner-s-guide-to-r-introduction.html).
+
+## More R Workflow
+
+* Software Carpenter has a course that covers some of more advanced topics I did not cover on R workflow: data wrangling with dplyr, tidyverse, and more on RStudio projects.  [Reproducible Research with R](http://swcarpentry.github.io/r-novice-gapminder/)
+
+* Eric Anderson produced a couple online courses on R workflow while with NOAA Fisheries.  [R Reproducible Research 2015](http://eriqande.github.io/rep-res-web/)  and [Reproducible Research 2017](https://eriqande.github.io/rep-res-eeb-2017/)
+
+## Forecasting and Exponential Smoothing Models
+
+Rob J Hyndman (lead on the forecast package)  and George Athanasopoulos have an excellent [online text on practical forecasting and exponential smoothing](https://otexts.org/fpp2/).
+
+## Shiny Apps
+
+Start with RStudio's [online tutorial](https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/) for shiny apps.
+
+

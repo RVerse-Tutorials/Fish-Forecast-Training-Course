@@ -11,7 +11,7 @@
 
 
 
-<title>Notes</title>
+<title>Continuing your learning</title>
 
 <script src="site_libs/jquery-1.11.3/jquery.min.js"></script>
 <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -246,120 +246,35 @@ $(document).ready(function () {
 
 
 
-<h1 class="title toc-ignore">Notes</h1>
+<h1 class="title toc-ignore">Continuing your learning</h1>
 
 </div>
 
 
-<div id="thursday" class="section level1">
-<h1>Thursday</h1>
-<p>For building a package with roxygen documentation (the part that makes the help files for you), you need to tell RStudio to build that documentation when you click ‘Build and Reload’.</p>
-<p>Go to Tools &gt; Project Options &gt; Build Tools Then click the box that says the build documentation with roxygen. A pop-up window should appear. Click the box at the bottom that says to remake documentation when you click ‘Build and Reload’.</p>
-<hr />
-<p>Seasonal data. If you have seasonal data that you would like to analyze, please put in this format:</p>
-<pre><code>  Year   Month  metric.tons
- 2018   1           1
- 2018   2           2
- 2018   3           3
- ...   
- 2019   1           4
- 2019   2           6
- 2019   3          NA</code></pre>
-<p>Read in with this code:</p>
-<pre><code>test &lt;- read.csv(&quot;Data/test.csv&quot;, stringsAsFactors = FALSE)
-save(test, file=&quot;test.RData&quot;)</code></pre>
-</div>
-<div id="wednesday" class="section level1">
-<h1>Wednesday</h1>
-<p>To save data in R to a .csv file use the following:</p>
-<pre><code>write.csv(landings, file=&quot;test.csv&quot;, row.names=FALSE, quote=FALSE)</code></pre>
-<p>This works for data.frames, like landings, and also matrices:</p>
-<pre><code>mat &lt;- matrix(rnorm(10),5,2)
-colnames(mat) &lt;- c(&quot;number 1&quot;, &quot;number 2&quot;)
-write.csv(landings, file=&quot;test.csv&quot;, row.names=FALSE, quote=FALSE)</code></pre>
-</div>
-<div id="tuesday" class="section level1">
-<h1>Tuesday</h1>
-<p>The bookdown-demo repository has been edited so that it does not try to make a PDF. If you want that, there are instructions in the README.md file.</p>
-<hr />
-<p>Read in simple csv file named <code>test.csv</code> that looks like this</p>
-<pre><code>  Year Species metric.tons
-1 2018   Fish1           1
-2 2019   Fish1           2
-3 2018   Fish2           3
-4 2019   Fish2           4
-5 2018   Fish3           6
-6 2019   Fish4          NA</code></pre>
-<p>with this code:</p>
-<pre><code>test &lt;- read.csv(&quot;Data/test.csv&quot;, stringsAsFactors = FALSE)
-save(test, file=&quot;test.RData&quot;)</code></pre>
-<hr />
-<p>Read in a file where the data are in columns. If your data (test.csv) look like this with each species (or site) across the columns:</p>
-<pre><code>Year,Anchovy,Sardine,Chub mackerel,Horse mackerel,Mackerel,Jack Mackerel
-1964,5449.2,12984.4,1720.7,4022.4,NA,NA
-1965,4263.5,10611.1,1278.5,4158.3,NA,NA
-1966,5146.4,11437.8,802.6,3012.1,NA,NA</code></pre>
-<p>Use this code:</p>
-<pre><code>library(reshape2)
-test &lt;- read.csv(&quot;Data/test.csv&quot;, stringsAsFactors = FALSE)
-melt(test, id=&quot;Year&quot;, value.name=&quot;metric.tons&quot;, variable.name=&quot;Species&quot;)
-save(test, file=&quot;test.RData&quot;)</code></pre>
-<p>If your data also have, say, a month (or qtr) column, use this code:</p>
-<pre><code>library(reshape2)
-test &lt;- read.csv(&quot;Data/test.csv&quot;, stringsAsFactors = FALSE)
-melt(test, id=c(&quot;Year&quot;,&quot;Month&quot;), value.name=&quot;metric.tons&quot;, variable.name=&quot;Species&quot;)
-save(test, file=&quot;test.RData&quot;)</code></pre>
-<hr />
-<p>If you have a response variable and multiple explanatory variables:</p>
-<pre><code>Year, Anchovy, SST,  Mackerel
-1964, 5449.2,  24.4, 1720.7
-1965, 4263.5,  30.1, 1278.5
-1966, 5146.4,  23.8,  802.6</code></pre>
-<p>Use this code:</p>
-<pre><code>test &lt;- read.csv(&quot;Data/test.csv&quot;, stringsAsFactors = FALSE)
-save(test, file=&quot;test.RData&quot;)</code></pre>
-<p>Use this <code>lm()</code> model (or gam() etc):</p>
-<pre><code>fit &lt;- lm(Anchovy ~ SST + Mackerel, data=test)</code></pre>
-<hr />
-<p>What is a list? It is a object with multiple other types of objects ‘tied’ together.</p>
-<pre class="r"><code>a &lt;- list(ar=c(.8,.3), name=&quot;model&quot;, years=1:10)
-a</code></pre>
-<pre><code>## $ar
-## [1] 0.8 0.3
-## 
-## $name
-## [1] &quot;model&quot;
-## 
-## $years
-##  [1]  1  2  3  4  5  6  7  8  9 10</code></pre>
-<p>You can now reference the different objects in <code>a</code>.</p>
-<pre class="r"><code>a$ar</code></pre>
-<pre><code>## [1] 0.8 0.3</code></pre>
-<pre class="r"><code>a$name</code></pre>
-<pre><code>## [1] &quot;model&quot;</code></pre>
-<hr />
-<p>Why is the <code>arima.sim</code> throwing an error sometimes? You must specify a stationary model and if you just randomly chose the <span class="math inline">\(\beta\)</span>’s (AR parameters) and <span class="math inline">\(\theta\)</span>’s (MA parameters) then you might be specifying a non-stationary model.</p>
-</div>
-<div id="monday" class="section level1">
-<h1>Monday</h1>
-<p>Please install the rmarkdown package. I forgot to include that.</p>
-<pre><code>install.packages(&quot;rmarkdown&quot;)</code></pre>
-<hr />
-<p>If you do not have LaTeX installed, you can install the tinytex package. Run these commands. This will allow you to make PDF files from R Markdown files. Some of you installed tinytex, but you need to run the 2nd command also to install LiveTeX.</p>
-<pre><code>install.packages(&#39;tinytex&#39;)
-tinytex::install_tinytex()</code></pre>
-<hr />
-<p>If your get an error saying package or repository unavailable when you are trying to install packages, try the following:</p>
+<p>Here are resources for continuing your learning of the topics that you studied this week:</p>
+<div id="intro-to-r" class="section level2">
+<h2>Intro to R</h2>
 <ul>
-<li>Make sure you are online.</li>
-<li>Run <code>chooseCRANmirror()</code> from the command line. Pick any mirror.</li>
-<li>Try installing package again. Repeat with a different mirror if it doesn’t work.</li>
+<li><p><a href="http://swcarpentry.github.io/r-novice-inflammation">Software Carpentry free tutorial</a></p></li>
+<li><p><a href="https://www.datacamp.com/courses/free-introduction-to-r">Data Camp free tutorial</a>. Takes about 4 hours.</p></li>
+<li><p>You can also learn R straight from within R using the <a href="https://swirlstats.com/">swirl package</a>. This doesn’t require internet access except to install the package.</p></li>
+<li><p>Basic R introduction from <a href="https://www.computerworld.com/article/2497143/business-intelligence/business-intelligence-beginner-s-guide-to-r-introduction.html">ComputerWorld</a>.</p></li>
 </ul>
-<hr />
-<hr>
-<div style="text-align: center">
-<p><i class="fas fa-cubes"></i> NOAA Fisheries - NW Fisheries Science Center <i class="fas fa-cubes"></i></p>
 </div>
+<div id="more-r-workflow" class="section level2">
+<h2>More R Workflow</h2>
+<ul>
+<li><p>Software Carpenter has a course that covers some of more advanced topics I did not cover on R workflow: data wrangling with dplyr, tidyverse, and more on RStudio projects. <a href="http://swcarpentry.github.io/r-novice-gapminder/">Reproducible Research with R</a></p></li>
+<li><p>Eric Anderson produced a couple online courses on R workflow while with NOAA Fisheries. <a href="http://eriqande.github.io/rep-res-web/">R Reproducible Research 2015</a> and <a href="https://eriqande.github.io/rep-res-eeb-2017/">Reproducible Research 2017</a></p></li>
+</ul>
+</div>
+<div id="forecasting-and-exponential-smoothing-models" class="section level2">
+<h2>Forecasting and Exponential Smoothing Models</h2>
+<p>Rob J Hyndman (lead on the forecast package) and George Athanasopoulos have an excellent <a href="https://otexts.org/fpp2/">online text on practical forecasting and exponential smoothing</a>.</p>
+</div>
+<div id="shiny-apps" class="section level2">
+<h2>Shiny Apps</h2>
+<p>Start with RStudio’s <a href="https://shiny.rstudio.com/tutorial/written-tutorial/lesson1/">online tutorial</a> for shiny apps.</p>
 </div>
 
 

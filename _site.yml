@@ -10,9 +10,9 @@ navbar:
   - text: Set-up
     icon: fa-clone
     href: set-up.html
-  - text: Data
+  - text: More Tutorials
     icon: fa-clipboard-list
-    href: data.html
+    href: nextsteps.html
   - text: Daily Notes
     href: notes.html
   - text: Contact
