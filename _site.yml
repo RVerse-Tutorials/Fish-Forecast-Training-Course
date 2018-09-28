@@ -13,9 +13,6 @@ navbar:
   - text: Data
     icon: fa-clipboard-list
     href: data.html
-  - text: Comments & Questions
-    icon: fa-comment
-    href: aboutyou.html
   - text: Daily Notes
     href: notes.html
   - text: Contact
