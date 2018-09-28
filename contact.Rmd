@@ -19,3 +19,5 @@ Seattle, WA
 eli.holmes@noaa.gov
 
 https://eeholmes.github.io/
+
+[NOAA Staff Page](https://www.nwfsc.noaa.gov/contact/display_staffprofile.cfm?staffid=336)

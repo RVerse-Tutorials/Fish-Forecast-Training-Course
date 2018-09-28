@@ -18,6 +18,8 @@ navbar:
     href: aboutyou.html
   - text: Daily Notes
     href: notes.html
+  - text: Contact
+    href: contact.html
   right:
   - icon: fa-home
     href: https://rverse-tutorials.github.io/Fish-Forecast-Training-Course/
