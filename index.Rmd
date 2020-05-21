@@ -11,7 +11,7 @@ International Training Centre for Operational Oceanography (ITCOocean)
 ESSO-Indian National Centre for Ocean Information Services(INCOIS), Hyderabad, India. 
 [Course Announcement](http://www.incois.gov.in/ITCOocean/ftsf.jsp)
 
-Instructor: Dr. [Eli Holmes](https://eeholmes.github.io/), NOAA Fisheries Service, [Northwest Fisheries Science Center](https://www.nwfsc.noaa.gov/), Seattle, WA, USA.
+Instructor: Dr. Eli Holmes, NOAA Fisheries Service, [Northwest Fisheries Science Center](https://www.nwfsc.noaa.gov/), Seattle, WA, USA.
 
 # Course Description
 
@@ -32,5 +32,5 @@ In the afternoon, you will learn to write reports and websites with R and R Mark
 
 
 <div style="text-align: center">
-<i class="fas fa-cubes"></i> NOAA Fisheries - NW Fisheries Science Center <i class="fas fa-cubes"></i>
+<i class="fas fa-cubes"></i> ---------------------------------- <i class="fas fa-cubes"></i>
 </div>
